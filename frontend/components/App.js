@@ -23,7 +23,7 @@ export default class App extends React.Component {
         {
           name: 'Retreat back home',
           id: 1528817077289,
-          completed: false
+          completed: true
         }
       ]
     }
@@ -36,7 +36,7 @@ export default class App extends React.Component {
         <ul>
         {
           todos.map(todo=>{
-            return (<li key={todo.id}>{todo.name}</li>)
+            return (<li key={todo.id}>{todo.name}{ todo.completed? <span>🐶</span> : <span></span>}</li>)
           })
         }
         </ul>
